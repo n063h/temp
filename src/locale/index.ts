@@ -1,6 +1,7 @@
 const i18n = {
   'en-US': {
     'menu.welcome': 'Welcome',
+    'menu.home': 'Home',
     'menu.dashboard': 'Dashboard',
     'menu.list': 'List',
     'menu.result': 'Result',
@@ -56,7 +57,7 @@ const i18n = {
     'message.empty': 'Empty',
     'message.empty.tips': 'No Content',
     'message.lang.tips': 'Language switch to ',
-    'navbar.search.placeholder': 'Please search',
+    'navbar.search.placeholder': 'Please search'
   },
   'zh-CN': {
     'menu.dashboard': '仪表盘',
@@ -114,8 +115,8 @@ const i18n = {
     'message.empty': '清空',
     'message.empty.tips': '暂无内容',
     'message.lang.tips': '语言切换至 ',
-    'navbar.search.placeholder': '输入内容查询',
-  },
+    'navbar.search.placeholder': '输入内容查询'
+  }
 };
 
 export default i18n;

@@ -35,22 +35,8 @@ const Content = Layout.Content;
 
 function getIconFromKey(key) {
   switch (key) {
-    case 'dashboard':
+    case 'home':
       return <IconDashboard className={styles.icon} />;
-    case 'list':
-      return <IconList className={styles.icon} />;
-    case 'form':
-      return <IconSettings className={styles.icon} />;
-    case 'profile':
-      return <IconFile className={styles.icon} />;
-    case 'visualization':
-      return <IconApps className={styles.icon} />;
-    case 'result':
-      return <IconCheckCircle className={styles.icon} />;
-    case 'exception':
-      return <IconExclamationCircle className={styles.icon} />;
-    case 'user':
-      return <IconUser className={styles.icon} />;
     default:
       return <div className={styles['icon-empty']} />;
   }
@@ -256,10 +242,9 @@ function PageLayout() {
                   <Route exact path="/">
                     <Redirect to={`/${defaultRoute}`} />
                   </Route>
-                  <Route
-                    path="*"
-                    component={lazyload(() => import('./pages/exception/403'))}
-                  />
+                  <Route path="*">
+                      <Redirect to={`/${defaultRoute}`} />
+                    </Route>
                 </Switch>
               </Content>
             </div>

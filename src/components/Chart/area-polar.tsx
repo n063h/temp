@@ -29,7 +29,7 @@ function AreaPolar(props: AreaPolarProps) {
     key: 'category', // key字段
     value: 'score', // value字段
   });
-
+  let s;
   return (
     <Spin loading={loading} style={{ width: '100%' }}>
       <Chart
@@ -40,7 +40,7 @@ function AreaPolar(props: AreaPolarProps) {
         scale={{
           score: {
             min: 0,
-            max: 80,
+            max: dv.rows.reduce((total,i)=>(s=i.score,total>s?total:s),0),
           },
         }}
         interactions={['legend-highlight']}
